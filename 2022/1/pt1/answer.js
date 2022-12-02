@@ -32,3 +32,15 @@ function getLargestCalNum(lines) {
 }
 
 console.log(`Largest calorie number: ${getLargestCalNum(lines)}`)
+
+/*
+My thinking behind this answer is that it's a lot easier to keep track
+of the highest calorie number if I just make a variable for it. Every time
+a new elf is introduced (which means the previous elf has finished calculating
+their total calories), I check the previous elf's calorie amount; if it's
+higher than the current largest calorie number I have, I replace it.
+
+Basically, as I count every elf's calories, I also track the current top
+number until another elf's calories replaces it. This keeps going until
+all calories have been counted.
+*/
